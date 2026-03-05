@@ -1,13 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Personal Portfolio Website</title>
-    <link rel="stylesheet" href="index.css">
-    <script src="https://kit.fontawesome.com/8cff674ed2.js" crossorigin="anonymous"></script>
-          
-</head> 
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sharana Basava | DevOps Engineer Portfolio</title>
+
+<meta name="description" content="Sharana Basava DevOps Engineer portfolio showcasing AWS, Docker, Kubernetes, Terraform, Jenkins CI/CD projects.">
+
+<meta name="keywords" content="Sharana Basava, DevOps Engineer, AWS DevOps, Kubernetes, Terraform, Jenkins, DevOps Portfolio">
+
+<meta name="author" content="Sharana Basava">
+
+<meta property="og:title" content="Sharana Basava | DevOps Engineer Portfolio">
+<meta property="og:description" content="DevOps Engineer portfolio with AWS, Docker, Kubernetes and CI/CD projects.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sharanabasava-dev.github.io/sharana-portfolio/">
+
+<link rel="stylesheet" href="index.css">
+
+<script src="https://kit.fontawesome.com/8cff674ed2.js" crossorigin="anonymous"></script>
+
+</head>
 <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
 <script>
@@ -30,7 +45,42 @@ alert("Message sent successfully!");
 alert("Failed to send message");
 });
 });
-</script>        
+</script> 
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+(function(){
+emailjs.init("mq2MMmlmZrEyMf7QV");
+})();
+
+window.onload = function(){
+
+document.getElementById("contact-form")
+.addEventListener("submit", function(event){
+
+event.preventDefault();
+
+emailjs.sendForm(
+"service_kasp2bd",
+"template_02s3741",
+this
+).then(function(){
+
+alert("Message sent successfully!");
+
+}, function(error){
+
+alert("Failed to send message");
+
+});
+
+});
+
+}
+</script>
+
+</body>
+</html>       
 <body>
     <div id="header">
         <div class="container">
