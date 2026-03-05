@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Personal Portfolio Website</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://kit.fontawesome.com/8cff674ed2.js" crossorigin="anonymous"></script>
+          
+</head> 
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+(function(){
+emailjs.init("mq2MMmlmZrEyMf7QV");
+})();
+
+document.getElementById("contact-form")
+.addEventListener("submit", function(event){
+
+event.preventDefault();
+
+emailjs.sendForm(
+"service_kasp2bd",
+"template_02s3741",
+this
+).then(function(){
+alert("Message sent successfully!");
+}, function(error){
+alert("Failed to send message");
+});
+});
+</script>        
+<body>
+    <div id="header">
+        <div class="container">
+            <nav> 
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+                </nav>
+                <div class="header-text">
+     <p>DevOps Engineer</p>
+
+<h1>
+AWS | Docker | Kubernetes <br>
+Jenkins | GitHub Actions <br>
+Terraform | Ansible | Linux
+</h1>
+<div class="tools">
+    <img src="images/New images/icons8-aws-50.png">
+    <img src="images/New images/icons8-docker-50.png">
+    <img src="images/New images/icons8-kubernetes-50.png">
+    <img src="images/New images/icons8-jenkins-50.png">
+    <img src="images/New images/icons8-terraform-50.png">
+    <img src="images/New images/icons8-linux-50.png">
+    <img src="images/New images/icons8-github-logo-50.png">
+</div>
+</div>
+            </div>
+        </div>
+
+    <!----------------------------------about me----------------------------------->
+
+    <div id="about">
+    <div class="container">
+        <div class="row">
+
+            <div class="about-col-1">
+                <img src="images/Sharana basava.jpg">
+            </div>
+
+            <div class="about-col-2">
+                <h1 class="sub-tittle">About Me</h1>
+
+                <p>
+                Hello! I'm <b>Sharanabasava</b>, a DevOps Engineer from Raichur, India. 
+                I have <b> experience in IT industry</b> specializing in 
+                cloud infrastructure, CI/CD pipelines, containerization, and automation.
+                I am passionate about building scalable cloud systems and improving 
+                deployment workflows using modern DevOps tools.
+                </p>
+
+                <div class="tab-tittle">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+
+                <!-- Skills -->
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Cloud Platforms</span><br>AWS, Azure</li>
+                        <li><span>DevOps Tools</span><br>Docker, Kubernetes, Jenkins, GitHub Actions</li>
+                        <li><span>Infrastructure as Code</span><br>Terraform, Ansible</li>
+                        <li><span>Monitoring</span><br>Prometheus, Grafana</li>
+                        <li><span>Operating Systems</span><br>Linux</li>
+                    </ul>
+                </div>
+
+                <!-- Experience -->
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>Present</span><br>Cloud DevOps Engineer at ITC INFOTECH INDIA PRIVATE LIMITED (Client: Mphasis)</li>
+                        <li><span>Projects</span><br>HSBC, Levi Strauss, Allied Irish Bank</li>
+                        <li><span>Role</span><br>DevOps Engineer</li>
+                    </ul>
+                </div>
+
+                <!-- Education -->
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>Bachelor of Computer Application (Computer Science)</span><br>Tumkur University</li>
+                        <li><span>PUC</span><br>Morarji Desai Science PU College,Raichur</li>
+                        <li><span>SSLC</span><br>Navachetana Kannada High School,Raichur</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!----------------------------------services----------------------------------->
+
+<div id="services">
+    <div class="container">
+        <h1 class="sub-tittle">My DevOps Services</h1>
+
+        <div class="services-list">
+
+            <!-- CI/CD -->
+            <div>
+                <i class="fa-solid fa-gears"></i>
+                <h2>CI/CD Pipeline</h2>
+                <p>
+                Implemented automated CI/CD pipelines using Jenkins, GitHub Actions
+                and Docker to build, test and deploy applications.
+                </p>
+
+                <a href="https://github.com/sharanabasava-dev" target="_blank">
+                View Project
+                </a>
+            </div>
+
+            <!-- Kubernetes -->
+            <div>
+                <i class="fa-brands fa-docker"></i>
+                <h2>Containerization & Kubernetes</h2>
+                <p>
+                Built Docker images and deployed applications into Kubernetes clusters
+                with load balancing and auto scaling.
+                </p>
+
+                <a href="https://github.com/sharanabasava-dev" target="_blank">
+                View Project
+                </a>
+            </div>
+
+            <!-- Cloud -->
+            <div>
+                <i class="fa-solid fa-cloud"></i>
+                <h2>Cloud Infrastructure</h2>
+                <p>
+                Designed scalable cloud infrastructure using AWS services like
+                EC2, S3, IAM, VPC, Load Balancer and EKS.
+                </p>
+
+                <a href="https://github.com/sharanabasava-dev" target="_blank">
+                View Project
+                </a>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!---------------------------portfolio------------------------------------------------>
+     
+<!---------------------------portfolio------------------------------------------------>
+
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-tittle">My DevOps Projects</h1>
+
+        <div class="work-list">
+
+            <!-- Project 1 -->
+            <div class="work">
+                <img src="images/work-1.png">
+                <div class="layer">
+                    <h3>CI/CD Project</h3>
+                    <p>
+                    Automated CI/CD pipeline using GitHub, Jenkins and Docker
+                    for building and deploying applications.
+                    </p>
+
+                    <a href="https://github.com/sharanabasava-dev/cicd-project" target="_blank">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="work">
+                <img src="images/work-2.png">
+                <div class="layer">
+                    <h3>DevOps CI/CD Pipeline</h3>
+                    <p>
+                    Complete DevOps pipeline with GitHub, Jenkins, Docker and
+                    automated deployment workflow.
+                    </p>
+
+                    <a href="https://github.com/sharanabasava-dev/devops-cicd-pipeline" target="_blank">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="work">
+                <img src="images/work-3.png">
+                <div class="layer">
+                    <h3>Flask DevOps EKS Deployment</h3>
+                    <p>
+                    Containerized Flask application deployed on AWS EKS using
+                    Docker, Kubernetes and DevOps automation.
+                    </p>
+
+                    <a href="https://github.com/sharanabasava-dev/python-flask-devops-eks" target="_blank">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<!-----------------------------------------contact----------------------------------->
+
+<div id="contact">
+    <div class="container">
+        <div class="row">
+
+            <div class="contact-left">
+                <h1 class="sub-tittle">Contact Me</h1>
+
+                <p><i class="fa-solid fa-paper-plane"></i> sharanpower581@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i> 6361449867</p>
+
+                <div class="social-icons">
+                    <a href="https://github.com/sharanabasava-dev" target="_blank">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+
+                    <a href="https://www.linkedin.com/" target="_blank">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+
+                    <a href="https://wa.me/6361449867" target="_blank">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+
+                
+
+            </div>
+
+
+            <div class="contact-right">
+
+                <form id="contact-form">
+                <input type="text" name="Name" placeholder="Name" required>
+                <input type="email" name="email" placeholder="Your Gmail" required>
+                <textarea name="Message" rows="6" placeholder="your message"></textarea>
+                <button type="submit" class="btn btn2">Submit</button>
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="copyright">
+     <p>© 2026 Sharan Basava | DevOps Engineer | Built with ❤️</p>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+(function(){
+emailjs.init("mq2MMmlmZrEyMf7QV");
+})();
+
+document.getElementById("contact-form").addEventListener("submit", function(e){
+e.preventDefault();
+
+emailjs.send("service_kasp2bd","template_02s3741",{
+name: document.querySelector('input[name="Name"]').value,
+email: document.querySelector('input[name="email"]').value,
+message: document.querySelector('textarea[name="Message"]').value
+})
+.then(function(){
+alert("Message Sent Successfully!");
+}, function(error){
+alert("Failed to send message");
+});
+});
+</script>
+<!-------------
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontents.classList.remove("active-tab");
+           }
+           event.currentTarget.classList.add("active-link");
+           document.getElementById(tabname).classList.add("active-tab");
+        }
+
+    </script>
+
+    <script>
+
+       var sidemenu = document.getElementById("sidemenu");
+       
+       function openmenu(){
+        sidemenu.style.right = "0";
+       }
+       function closemenu(){
+        sidemenu.style.right = "-200px";
+       }
+
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzA88R426CIBuwPkeG2S51XRe9TPliOTBuWRaKuBwpdksoLJPaGAgHKWbUEddfrBlTMxA/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Message sent successful"
+                setTimeout(function(){
+                    msg.innerHTML = ""
+                },5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script> -->
+      <script src="index.js"></script>
+</body>
+</html>
